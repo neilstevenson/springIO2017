@@ -15,6 +15,24 @@
                 </member-list>
             </tcp-ip>
         </join>
-        </network>
+    </network>
+    
+    <map name="fibonacci">
+		<entry-listeners>
+            <entry-listener include-value="true" local="true">neil.demo.barcelona.MyMapListener</entry-listener>
+		</entry-listeners>    	
+    </map>
+  
+  	<!-- Predefine the cache, and turn on management center -->  
+    <cache name="fibonacci">
+    	<statistics-enabled>true</statistics-enabled>
+  		<management-enabled>true</management-enabled>
+  		
+  		<cache-entry-listeners>
+            <cache-entry-listener old-value-required="true" synchronous="true">
+                <cache-entry-listener-factory class-name="neil.demo.barcelona.MyCacheListenerFactory"/>
+            </cache-entry-listener>
+        </cache-entry-listeners>
+  	</cache>
 
 </hazelcast>

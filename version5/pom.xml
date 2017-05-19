@@ -7,8 +7,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>server</artifactId>
-	<description>A standalone Hazelcast server</description>
+	<artifactId>version5</artifactId>
+	<name>${project.artifactId} = best of the best</name>
+	<description>JCache standard</description>
 
 	<dependencies>
 		<dependency>
@@ -17,10 +18,23 @@
 			<version>${project.version}</version>
 		</dependency>	
 
+		<!-- Hazelcast client -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-client</artifactId>
 		</dependency>
+
+		<!-- Hazelcast Spring support -->
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-spring</artifactId>
+		</dependency>	
+
+		<!-- JCache API (Hazelcast is implementation) -->
+        <dependency>
+        	<groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>

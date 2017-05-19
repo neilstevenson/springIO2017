@@ -10,6 +10,18 @@
 	<artifactId>common</artifactId>
 
 	<dependencies>
+		<!-- Hazelcast server -->
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast</artifactId>
+		</dependency>
+	
+		<!-- JCache API (Hazelcast is an implementation) -->
+        <dependency>
+			<groupId>javax.cache</groupId>
+			<artifactId>cache-api</artifactId>
+        </dependency>
+                
 		<!-- For the MyResult class definition -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
